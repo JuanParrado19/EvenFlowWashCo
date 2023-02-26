@@ -23,9 +23,9 @@
     </label>
 
     <nav class="menu">
-        <a href="#">Home</a>
-        <a href="#">About Us</a>
-        <a href="#">Our Work</a>
+        <a href="#banner">Home</a>
+        <a href="#personas">About Us</a>
+        <a href="#iconos">Our Work</a>
         <label for="check" class="esconder-menu">
             &#215
         </label>
@@ -36,10 +36,10 @@
     <div class="contenido-banner">
         <h3>
             <span>EvenFlow: </span>
-            WEB DESING RESPONSIVE <br>
-            MOBILE FRIENDLY
+            Work with us !!! <br>
+            Cleaning Company
         </h3>
-        <a href="#" class="btn-empezar">Start</a>
+        <a href="#contacto" class="btn-empezar">Start</a>
     </div>
 
 </section>
@@ -53,9 +53,9 @@
 
         <div>
             <img src="./images/garret.jpeg" alt="" class="img-ceo">
-            <h4>Lorem ipsum dolor sit amet.</h4>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa, vero.</p>
-            <a href="#" class="btn-saber-mas">Saber mas</a>
+            <h4>Garret Jorgenson</h4>
+            <p>CEO</p>
+            <a href="#contacto" class="btn-saber-mas">Know more</a>
         </div>
 
     </div>
@@ -67,44 +67,48 @@
     <div class="contenido-iconos">
         <div>
             <i class="fa-sharp fa-solid fa-paint-roller fa-3x"></i>
-            <h6>Rapido</h6>
-            <p>Lorem ipsum dolor sit.</p>
+            <h6>Fast</h6>
+            <p>We make our work Faster than anyone.</p>
         </div>
         <div>
             <i class="fa-solid fa-hand-sparkles fa-3x"></i>
-            <h6>Rapido</h6>
-            <p>Lorem ipsum dolor sit.</p>
+            <h6>Assured cleanliness</h6>
+            <p>You would never recognice again your house, backyard, driveway, etc...</p>
         </div>
         <div id="icono-mobile">
             <i class="fa-sharp fa-solid fa-house fa-3x"></i>
-            <h6>Rapido</h6>
-            <p>Lorem ipsum dolor sit.</p>
+            <h6>House</h6>
+            <p>The cleaning process its going to be incredible for the beauty of your home. </p>
         </div>
     </div>
 
     <div class="btn-iconos">
-        <a href="#" class="btn-saber-mas">Saber Mas</a>
+        <a href="#contacto" class="btn-saber-mas">Know more</a>
     </div>
 </section>
 
 <section id="contacto">
-    <h4>Contacta connosotros</h4>
-    <form action="#">
+    <h4>Contact with us</h4>
+    <form action="https://formspree.io/f/xeqwkjpd"
+          method="POST">
         <div class="datos-form">
             <div class="nombre">
-                <label for="nombre">Nombre</label>
-                <input type="text" name="nombre" id="nombre" placeholder="Nombre">
+                <label for="nombre">Name</label>
+                <input type="text" name="nombre" id="nombre" placeholder="Name" required>
             </div>
             <div class="email">
                 <label for="email">Email</label>
-                <input type="email" name="email" id="email" placeholder="Email">
+                <input type="email" name="email" id="email" placeholder="Email" required>
             </div>
             <div class="mensaje">
-                <label for="mensaje">Mensaje</label>
-                <textarea name="mensaje" id="mensaje" cols="30" rows="10" placeholder="Mensaje"></textarea>
+                <label for="mensaje">Message</label>
+                <textarea name="message" id="mensaje" cols="30" rows="10" placeholder="Please describe your query"
+                          required></textarea>
             </div>
             <div class="btn-formulario">
-                <a href="#" class="btn-saber-mas">Enviar Mensaje</a>
+
+                <button type="submit" class="btn-saber-mas">Send Form</button>
+
             </div>
         </div>
     </form>
