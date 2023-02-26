@@ -68,7 +68,7 @@ header{
 }
 #banner::before{
     content: '';
-    background: rgba(77,77,92,0.6);
+    background: rgba(77, 77, 77, 0.54);
     position: absolute;
     width: 100%;
     height: 45vh;
@@ -117,6 +117,7 @@ btn.btn-empezar:hover{
     justify-content: center;
     text-align: center;
 
+
 }
 
 .contenido-personas{
@@ -124,6 +125,7 @@ btn.btn-empezar:hover{
     display: flex;
     justify-content: space-between;
     text-align: center;
+
 
 
 }
@@ -223,12 +225,13 @@ btn.btn-empezar:hover{
 #contacto{
     background: rgb(215, 173, 35);
     padding: 50px 0px;
-    color: grey;
+    color: white;
 }
 #contacto h4{
     text-align: center;
     font-size: 25px;
     margin-bottom: 20px;
+    font-weight: lighter;
 }
 #contacto form{
     max-width: 80%;
@@ -250,11 +253,12 @@ form input,
 form textarea{
     background: rgb(41, 40, 35);
     border-radius: 10px;
-    border: 2px solid rgb(84, 81, 65);
+    border: 2px solid white;
     padding: 10px 5px;
     outline: 0;
     color: white;
     width: 100%;
+
 
 }
 form input:focus,
@@ -281,7 +285,7 @@ form textarea::placeholder{
 }
 
 .btn-formulario .btn-saber-mas{
-    background: grey;
+    background: rgb(41, 40, 35);
     
 }
 
