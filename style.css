@@ -21,9 +21,10 @@ header{
 }
 
 .logo{
-    text-transform: uppercase;
-    color: white;
-    font-weight: 200;
+    height: 50%;
+    width: 50%;
+    object-position: left;
+    object-fit: scale-down;
 
 }
 
@@ -60,13 +61,33 @@ header{
 /* BANNER */
 
 #banner{
-    padding: 0 50px;
+
     background-image: url(/images/BackgroundEFWC.jpeg);
     height: 45vh;
     background-size: cover;
     background-position: center;
+
 }
-#banner::before{
+#banner-slider {
+    -moz-animation: automatizacion 15s infinite linear;
+    -o-animation: automatizacion 15s infinite linear;
+    -webkit-animation: automatizacion 15s infinite linear;
+    animation: automatizacion 15s infinite linear;
+    -webkit-transition: all 0.75s ease;
+    -moz-transition: all 0.75s ease;
+    -ms-transition: all 0.75s ease;
+    -o-transition: all 0.75s ease;
+    transition: all 0.75s ease;
+    height: 45vh;
+    width: 300%;
+}
+#banner-container {
+    position: absolute;
+    margin: 0 auto;
+    overflow: hidden;
+    text-align: left;
+}
+#banner-container::before{
     content: '';
     background: rgba(77, 77, 77, 0.54);
     position: absolute;
@@ -74,7 +95,85 @@ header{
     height: 45vh;
     left: 0;
 }
+.imagenes{
+    height: 45vh;
+    width: 100%;
+}
+.banner-img {
+    float: left;
+    width: 33.333%;
+}
+@-moz-keyframes automatizacion {
+    0% {
+        margin-left: 0;
+    }
+    30% {
+        margin-left: 0;
+    }
+    35% {
+        margin-left: -100%;
+    }
+    65% {
+        margin-left: -100%;
+    }
+    70% {
+        margin-left: -200%;
+    }
+    95% {
+        margin-left: -200%;
+    }
+    100% {
+        margin-left: 0;
+    }
+}
+@-webkit-keyframes automatizacion {
+    0% {
+        margin-left: 0;
+    }
+    30% {
+        margin-left: 0;
+    }
+    35% {
+        margin-left: -100%;
+    }
+    65% {
+        margin-left: -100%;
+    }
+    70% {
+        margin-left: -200%;
+    }
+    95% {
+        margin-left: -200%;
+    }
+    100% {
+        margin-left: 0;
+    }
+}
+@keyframes automatizacion {
+    0% {
+        margin-left: 0;
+    }
+    30% {
+        margin-left: 0;
+    }
+    35% {
+        margin-left: -100%;
+    }
+    65% {
+        margin-left: -100%;
+    }
+    70% {
+        margin-left: -200%;
+    }
+    95% {
+        margin-left: -200%;
+    }
+    100% {
+        margin-left: 0;
+    }
+}
 .contenido-banner{
+    padding: 10px 20px;
     position: relative;
     color: rgb(240, 240, 240);
     height: 100%;
@@ -85,13 +184,15 @@ header{
 
 .contenido-banner h3{
     font-size: 30px;
-    font-weight: 400;
+    font-weight: 200;
     padding: 10px 0px;
 
 }
 
 .contenido-banner h3 span{
-    font-weight: 600;
+    font-weight: 500;
+    color: rgb(215, 173, 35);
+    -webkit-text-stroke: .5px rgb(133, 103, 1);
 }
 
 .btn-empezar{
@@ -113,21 +214,47 @@ btn.btn-empezar:hover{
 #personas{
 
     padding: 50px 50px;
-    display: flex;
+    display: inline;
     justify-content: center;
     text-align: center;
-
 
 }
 
 .contenido-personas{
     padding: 50px 50px 0px 50px;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     text-align: center;
+}
+.contenido-IgFrame{
+    height: 820px;
+    width: 500px;
+}
+.IgFrame{
+    width: 100%;
+    height: 100%;
+    object-fit: scale-down;
+    object-position: center;
+    border: 0;
+}
+.Imagenes-Carrusel{
+    display: flex;
+    height: 820px;
+    width: 430px;
+}
 
-
-
+.Imagenes-Carrusel img{
+    width: 0px;
+    flex-grow: 1;
+    object-fit: cover;
+    opacity: .8;
+    transition: .5s ease;
+}
+.Imagenes-Carrusel img:hover{
+    cursor: crosshair;
+    width: 300px;
+    opacity: 1;
+    filter: contrast(120%);
 }
 
 .img-ceo {
@@ -147,18 +274,31 @@ btn.btn-empezar:hover{
 }
 #personas div{
     padding: 30px 30px;
+    justify-content: center;
+
+
+}
+.contenido-informacion-sup{
+    display: flex;
+}
+.contenido-informacion{
+    width: 70%;
+    align-content: center;
 }
 
 #personas div h4{
     color: rgb(41, 40, 35);
     font-size: 20px;
     margin: 15px 0px;
+
 }
 
 #personas div p{
-    color: rgb(41, 40, 35);
+    color: rgb(45, 45, 45);
     font-size: 18px;
-
+    font-weight: 100;
+    padding: 20px;
+    text-align: justify;
 }
 .btn-saber-mas{
     display: inline-block;
@@ -195,13 +335,9 @@ btn.btn-empezar:hover{
     flex: 1;
     margin: 20px 0px;
 
-
-
 }
 
-#icono-mobile{
-    border: none;
-}
+
 
 .contenido-iconos div i{
     color: rgb(103, 103, 103);
@@ -217,11 +353,28 @@ btn.btn-empezar:hover{
 .contenido-iconos div p{
     color: rgba(255, 255, 255, 0.68);
     font-size: 15px;
-} 
+}
+
+.container-btn-iconos{
+    padding-bottom:50px ;
+    text-align: center;
+}
 
 .btn-iconos{
+    padding: 10px 30px;
+    color: white;
+    display: inline-block;
     text-align: center;
-    padding-bottom: 50px;
+    text-decoration: none;
+    border: 3px solid rgb(255, 255, 255);
+    border-radius: 30px;
+    margin-top: 15px;
+    transition: all 0.4s;
+
+}
+.btn-iconos:hover{
+    background: white;
+    color: rgba(73, 73, 73, 0.46);
 }
 
 /* FORMULARIO */
@@ -347,9 +500,26 @@ footer{
     #personas{
         flex-direction: column;
     }
+    #personas div{
+        padding: 30px 20px 30px 23px;
+    }
     .contenido-personas{
-
+        padding: 50px 50px 0px 50px;
+        text-align: center;
         display: inline;
+        justify-content: center;
+        align-items: center;
+        padding-right: 0;
+    }
+    .contenido-IgFrame{
+        height: 500px;
+        width: 89%;
+        object-position: left;
+    }
+    .Imagenes-Carrusel{
+        display: flex;
+        height: 100%;
+        width: 89%;
     }
 
      /* ICONOS */
