@@ -3,7 +3,12 @@
 *{
     margin: 0;
     padding: 0;
-    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-family:coolvetica;
+
+}
+@font-face {
+    font-family: coolvetica;
+    src: url("./font/coolvetica rg.otf") format("otf");
 
 }
 
@@ -11,19 +16,21 @@
 
 header{
     height: 100px;
-    background: rgb(10, 126, 126);
+    background: rgb(94, 94, 94);
     padding: 0 50px;
     color: white;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
+    border: rgb(215, 173, 35) 5px inset;
+
 
 }
 
 .logo{
-    height: 50%;
-    width: 50%;
-    object-position: left;
+    height: 100%;
+    width: 100%;
+    object-position: center;
     object-fit: scale-down;
 
 }
@@ -63,7 +70,7 @@ header{
 #banner{
 
     background-image: url(/images/BackgroundEFWC.jpeg);
-    height: 45vh;
+    height: 90vh;
     background-size: cover;
     background-position: center;
 
@@ -78,7 +85,7 @@ header{
     -ms-transition: all 0.75s ease;
     -o-transition: all 0.75s ease;
     transition: all 0.75s ease;
-    height: 45vh;
+    height: 90vh;
     width: 300%;
 }
 #banner-container {
@@ -92,11 +99,11 @@ header{
     background: rgba(77, 77, 77, 0.54);
     position: absolute;
     width: 100%;
-    height: 45vh;
+    height: 90vh;
     left: 0;
 }
 .imagenes{
-    height: 45vh;
+    height: 90vh;
     width: 100%;
 }
 .banner-img {
@@ -198,15 +205,15 @@ header{
 .btn-empezar{
     text-decoration: none;
     color: rgb(255, 255, 255);
-    border: 1px solid rgb(234, 234, 234);
+    border: 5px inset rgb(215, 173, 35);
     padding: 20px 40px;
     align-self: baseline;
-    transition: all 0.4s;
+    transition: all 0.5s;
      
 }
-
-btn.btn-empezar:hover{
+.btn-empezar:hover{
     background: white;
+    color: #5d5d5e;
 }
 
 /* PEOPLE */
@@ -240,7 +247,7 @@ btn.btn-empezar:hover{
 .Imagenes-Carrusel{
     display: flex;
     height: 820px;
-    width: 430px;
+    width: 70%;
 }
 
 .Imagenes-Carrusel img{
@@ -494,6 +501,19 @@ footer{
 
     #check:checked ~ .menu{
         right: 0;
+    }
+    /* Banner */
+    #banner{
+        height: 45vh;
+    }
+    #banner-slider{
+        height: 45vh;
+    }
+    #banner-container::before{
+        height: 45vh;
+    }
+    .imagenes{
+        height: 45vh;
     }
 
     /* personas */
