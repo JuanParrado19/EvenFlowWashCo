@@ -1,33 +1,31 @@
 /* RESET */
-
-*{
-    margin: 0;
-    padding: 0;
-    font-family:coolvetica;
+@font-face {
+    font-family: "coolvetica";
+    src: url("./font/coolvetica rg.otf") format("opentype") ;
 
 }
-@font-face {
-    font-family: coolvetica;
-    src: url("./font/coolvetica rg.otf") format("otf");
 
+* {
+    margin: 0;
+    padding: 0;
+    font-family: coolvetica;
 }
 
 /* HEADER */
 
-header{
+header {
     height: 100px;
-    background: rgb(94, 94, 94);
+    background: rgb(47, 47, 47);
     padding: 0 50px;
     color: white;
     display: flex;
     justify-content: center;
     align-items: center;
-    border: rgb(215, 173, 35) 5px inset;
 
 
 }
 
-.logo{
+.logo {
     height: 100%;
     width: 100%;
     object-position: center;
@@ -35,7 +33,7 @@ header{
 
 }
 
-.menu a{
+.menu a {
     color: white;
     text-transform: uppercase;
     text-decoration: none;
@@ -44,30 +42,30 @@ header{
 
 }
 
-.mostrar-menu,.esconder-menu{
+.mostrar-menu, .esconder-menu {
     font-size: 30px;
     cursor: pointer;
     display: none;
     transition: 0.4s;
 }
 
-.mostrar-menu{
+.mostrar-menu {
     order: 1;
 
 }
 
-.menu a:hover, .mostrar-menu:hover, .esconder-menu:hover{
+.menu a:hover, .mostrar-menu:hover, .esconder-menu:hover {
 
     color: white;
 }
 
-#check{
+#check {
     display: none;
 }
 
 /* BANNER */
 
-#banner{
+#banner {
 
     background-image: url(/images/BackgroundEFWC.jpeg);
     height: 90vh;
@@ -75,6 +73,7 @@ header{
     background-position: center;
 
 }
+
 #banner-slider {
     -moz-animation: automatizacion 15s infinite linear;
     -o-animation: automatizacion 15s infinite linear;
@@ -88,13 +87,15 @@ header{
     height: 90vh;
     width: 300%;
 }
+
 #banner-container {
     position: absolute;
     margin: 0 auto;
     overflow: hidden;
     text-align: left;
 }
-#banner-container::before{
+
+#banner-container::before {
     content: '';
     background: rgba(77, 77, 77, 0.54);
     position: absolute;
@@ -102,14 +103,17 @@ header{
     height: 90vh;
     left: 0;
 }
-.imagenes{
+
+.imagenes {
     height: 90vh;
     width: 100%;
 }
+
 .banner-img {
     float: left;
     width: 33.333%;
 }
+
 @-moz-keyframes automatizacion {
     0% {
         margin-left: 0;
@@ -133,6 +137,7 @@ header{
         margin-left: 0;
     }
 }
+
 @-webkit-keyframes automatizacion {
     0% {
         margin-left: 0;
@@ -156,6 +161,7 @@ header{
         margin-left: 0;
     }
 }
+
 @keyframes automatizacion {
     0% {
         margin-left: 0;
@@ -179,7 +185,8 @@ header{
         margin-left: 0;
     }
 }
-.contenido-banner{
+
+.contenido-banner {
     padding: 10px 20px;
     position: relative;
     color: rgb(240, 240, 240);
@@ -189,36 +196,37 @@ header{
     justify-content: center;
 }
 
-.contenido-banner h3{
+.contenido-banner h3 {
     font-size: 30px;
     font-weight: 200;
     padding: 10px 0px;
 
 }
 
-.contenido-banner h3 span{
+.contenido-banner h3 span {
     font-weight: 500;
     color: rgb(215, 173, 35);
     -webkit-text-stroke: .5px rgb(133, 103, 1);
 }
 
-.btn-empezar{
+.btn-empezar {
     text-decoration: none;
     color: rgb(255, 255, 255);
     border: 5px inset rgb(215, 173, 35);
     padding: 20px 40px;
     align-self: baseline;
     transition: all 0.5s;
-     
+
 }
-.btn-empezar:hover{
+
+.btn-empezar:hover {
     background: white;
     color: #5d5d5e;
 }
 
 /* PEOPLE */
 
-#personas{
+#personas {
 
     padding: 50px 50px;
     display: inline;
@@ -227,37 +235,43 @@ header{
 
 }
 
-.contenido-personas{
+.contenido-personas {
     padding: 50px 50px 0px 50px;
     display: flex;
     justify-content: center;
     text-align: center;
 }
-.contenido-IgFrame{
+
+.contenido-IgFrame {
     height: 820px;
     width: 500px;
+    overflow: hidden;
 }
-.IgFrame{
+
+.IgFrame {
     width: 100%;
     height: 100%;
     object-fit: scale-down;
     object-position: center;
     border: 0;
+    overflow: hidden;
 }
-.Imagenes-Carrusel{
+
+.Imagenes-Carrusel {
     display: flex;
     height: 820px;
     width: 70%;
 }
 
-.Imagenes-Carrusel img{
+.Imagenes-Carrusel img {
     width: 0px;
     flex-grow: 1;
     object-fit: cover;
     opacity: .8;
     transition: .5s ease;
 }
-.Imagenes-Carrusel img:hover{
+
+.Imagenes-Carrusel img:hover {
     cursor: crosshair;
     width: 300px;
     opacity: 1;
@@ -270,44 +284,48 @@ header{
     height: 80%;
     object-fit: cover;
     object-position: bottom;
-  
+
 }
 
-.img-empresa{
+.img-empresa {
     width: 100%;
     height: 80%;
     object-fit: scale-down;
     object-position: center;
 }
-#personas div{
+
+#personas div {
     padding: 30px 30px;
     justify-content: center;
 
 
 }
-.contenido-informacion-sup{
+
+.contenido-informacion-sup {
     display: flex;
 }
-.contenido-informacion{
+
+.contenido-informacion {
     width: 70%;
     align-content: center;
 }
 
-#personas div h4{
+#personas div h4 {
     color: rgb(41, 40, 35);
     font-size: 20px;
     margin: 15px 0px;
 
 }
 
-#personas div p{
+#personas div p {
     color: rgb(45, 45, 45);
     font-size: 18px;
     font-weight: 100;
     padding: 20px;
     text-align: justify;
 }
-.btn-saber-mas{
+
+.btn-saber-mas {
     display: inline-block;
     text-decoration: none;
     color: rgb(41, 40, 35);
@@ -318,19 +336,19 @@ header{
     transition: all 0.4s;
 }
 
-.btn-saber-mas:hover{
+.btn-saber-mas:hover {
     background: white;
     color: rgba(140, 140, 140, 0.46);
 }
 
 /* Iconos */
-#iconos{
+#iconos {
     padding: 0px 50px;
-    background:rgb(41, 40, 35);
+    background: rgb(47, 47, 47);
 
 }
 
-.contenido-iconos{
+.contenido-iconos {
 
     padding: 50px 50px 0px 50px;
     display: flex;
@@ -338,36 +356,35 @@ header{
     text-align: center;
 }
 
-.contenido-iconos div{
+.contenido-iconos div {
     flex: 1;
     margin: 20px 0px;
 
 }
 
 
-
-.contenido-iconos div i{
+.contenido-iconos div i {
     color: rgb(103, 103, 103);
 }
 
-.contenido-iconos div h6{
-    color:white;
+.contenido-iconos div h6 {
+    color: white;
     font-size: 20px;
     font-weight: 100;
     margin: 10px 0px;
 }
 
-.contenido-iconos div p{
+.contenido-iconos div p {
     color: rgba(255, 255, 255, 0.68);
     font-size: 15px;
 }
 
-.container-btn-iconos{
-    padding-bottom:50px ;
+.container-btn-iconos {
+    padding-bottom: 50px;
     text-align: center;
 }
 
-.btn-iconos{
+.btn-iconos {
     padding: 10px 30px;
     color: white;
     display: inline-block;
@@ -379,42 +396,48 @@ header{
     transition: all 0.4s;
 
 }
-.btn-iconos:hover{
+
+.btn-iconos:hover {
     background: white;
     color: rgba(73, 73, 73, 0.46);
 }
 
 /* FORMULARIO */
 
-#contacto{
+#contacto {
     background: rgb(215, 173, 35);
     padding: 50px 0px;
     color: white;
 }
-#contacto h4{
+
+#contacto h4 {
     text-align: center;
     font-size: 25px;
     margin-bottom: 20px;
     font-weight: lighter;
 }
-#contacto form{
+
+#contacto form {
     max-width: 80%;
     margin: 0 auto;
 }
-.datos-form{
+
+.datos-form {
     display: block;
 }
-.datos-form div{
+
+.datos-form div {
     padding: 10px;
     flex: 1;
 }
-form label{
+
+form label {
     display: block;
     margin-bottom: 10px;
 }
 
 form input,
-form textarea{
+form textarea {
     background: rgb(41, 40, 35);
     border-radius: 10px;
     border: 2px solid white;
@@ -425,22 +448,25 @@ form textarea{
 
 
 }
+
 form input:focus,
-form textarea:focus{
+form textarea:focus {
     border-color: grey;
     box-shadow: 0 0 0 1px grey;
 }
+
 form input::placeholder,
-form textarea::placeholder{
+form textarea::placeholder {
     color: white;
 }
-.mensaje{
+
+.mensaje {
     display: flex;
     flex-direction: column;
     padding: 10px;
 }
 
-.btn-formulario .btn-saber-mas{
+.btn-formulario .btn-saber-mas {
     display: block;
     border: 1px solid white;
     color: white;
@@ -448,15 +474,15 @@ form textarea::placeholder{
     transition: 0.4s;
 }
 
-.btn-formulario .btn-saber-mas{
+.btn-formulario .btn-saber-mas {
     background: rgb(41, 40, 35);
-    
+
 }
 
 /* FOOTER */
 
-footer{
-    background: grey;
+footer {
+    background: rgb(47, 47, 47);
     color: #cccccc4a;
     text-align: center;
     padding: 10px 0px;
@@ -464,15 +490,14 @@ footer{
 
 /* RESPONSIVE */
 
-@media(max-width: 760px){   
+@media (max-width: 760px) {
     /* HEADER */
-
-    .mostrar-menu, .esconder-menu{
+    .mostrar-menu, .esconder-menu {
 
         display: block;
     }
 
-    .menu{
+    .menu {
         position: fixed;
         width: 100%;
         height: 100%;
@@ -480,50 +505,56 @@ footer{
         right: -100%;
         top: 0;
         text-align: center;
-        padding: 100px 0px ;
+        padding: 100px 0px;
         z-index: 100;
         transition: 0.8s;
     }
 
-    .menu a{
+    .menu a {
         display: block;
         padding: 20px;
 
 
     }
 
-    .esconder-menu{
+    .esconder-menu {
         position: absolute;
         top: 40px;
         right: 40px;
 
     }
 
-    #check:checked ~ .menu{
+    #check:checked ~ .menu {
         right: 0;
     }
+
     /* Banner */
-    #banner{
+    #banner {
         height: 45vh;
     }
-    #banner-slider{
+
+    #banner-slider {
         height: 45vh;
     }
-    #banner-container::before{
+
+    #banner-container::before {
         height: 45vh;
     }
-    .imagenes{
+
+    .imagenes {
         height: 45vh;
     }
 
     /* personas */
-    #personas{
+    #personas {
         flex-direction: column;
     }
-    #personas div{
+
+    #personas div {
         padding: 30px 20px 30px 23px;
     }
-    .contenido-personas{
+
+    .contenido-personas {
         padding: 50px 50px 0px 50px;
         text-align: center;
         display: inline;
@@ -531,28 +562,30 @@ footer{
         align-items: center;
         padding-right: 0;
     }
-    .contenido-IgFrame{
+
+    .contenido-IgFrame {
         height: 500px;
         width: 89%;
         object-position: left;
     }
-    .Imagenes-Carrusel{
+
+    .Imagenes-Carrusel {
         display: flex;
         height: 100%;
         width: 89%;
     }
 
-     /* ICONOS */
-     .contenido-iconos{
+    /* ICONOS */
+    .contenido-iconos {
         flex-direction: column;
-     }
+    }
 
-     .contenido-iconos div{
+    .contenido-iconos div {
         border: none;
-     }
+    }
 
-     /* FORMULARIO */
-     .datos-form{
+    /* FORMULARIO */
+    .datos-form {
         flex-direction: column;
-     }
+    }
 }
