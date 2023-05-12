@@ -21,8 +21,6 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
-
-
 }
 
 .logo {
@@ -191,16 +189,23 @@ header {
     position: relative;
     color: rgb(240, 240, 240);
     height: 100%;
-    display: flex;
+    display: grid;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
+    align-items: flex-end;
 }
 
 .contenido-banner h3 {
     font-size: 30px;
     font-weight: 200;
     padding: 10px 0px;
+    text-align: center;
+
+}
+.contenido-banner h4 {
+    font-size: 17px;
+    font-weight: 200;
+    padding: 60px 0px;
     text-align: center;
 
 }
@@ -537,6 +542,11 @@ footer {
         top: 40px;
         right: 40px;
 
+    }
+
+    .contenido-banner h4{
+        font-size: 12px;
+        padding: 0px 0px 20px;
     }
 
     #check:checked ~ .menu {
